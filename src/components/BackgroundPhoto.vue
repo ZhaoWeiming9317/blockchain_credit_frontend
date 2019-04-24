@@ -14,7 +14,7 @@ export default {
     position: absolute;
     margin-top: 70px;
     width: 100%;
-    height: calc(100% - 70px);
+    height:calc(100% - 70px);
     background:url("../assets/shenzheng.jpg");
     background-size: cover;
   }

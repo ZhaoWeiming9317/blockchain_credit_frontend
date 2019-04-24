@@ -1,8 +1,12 @@
 <template>
   <div class="home_page_wrapper">
-    <TopNavigation></TopNavigation>
-    <MainPage></MainPage>
-    <BackgroundPhoto></BackgroundPhoto>
+    <keep-alive>
+      <TopNavigation></TopNavigation>
+    </keep-alive>
+    <router-view/>
+    <keep-alive>
+      <BackgroundPhoto></BackgroundPhoto>
+    </keep-alive>
   </div>
 </template>
 

@@ -25,8 +25,8 @@ export default {
   p{word-wrap:break-word}
   #app{
     width:100%;
-    height: 100%;
+    min-height: 720px;
     overflow:hidden;
-    background-color: #ffffff;
+    background-color: #342272;
   }
 </style>

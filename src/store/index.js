@@ -8,7 +8,14 @@ import getters from './getters'
 // 需要注册vuex到vue中
 Vue.use(Vuex)
 
-const state = {}
+const state = {
+  nav_list: [
+    {name: 'Display', isActive: false},
+    {name: 'Submit', isActive: true},
+    {name: 'Request', isActive: false},
+    {name: 'Score', isActive: false},
+    {name: 'Help', isActive: false}]
+}
 
 export default new Vuex.Store({
   state,
