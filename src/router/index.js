@@ -6,16 +6,18 @@ Vue.use(Router)
 const HomePage = r => require.ensure([], () => r(require('@/components/HomePage')), 'HomePage')
 const MainPage = r => require.ensure([], () => r(require('@/components/MainPage')), 'MainPage')
 const SubmitPage = r => require.ensure([], () => r(require('@/components/SubmitPage')), 'SubmitPage')
+const DisplayPage = r => require.ensure([], () => r(require('@/components/DisplayPage')), 'DisplayPage')
+const LoginPage = r => require.ensure([], () => r(require('@/components/LoginPage')), 'LoginPage')
 
 export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/HomePage/Submit'
+      redirect: '/HomePage/Display'
     },
     {
       path: '*',
-      redirect: '/HomePage/Submit'
+      redirect: '/HomePage/Display'
     },
     {
       path: '/HomePage',
@@ -27,8 +29,16 @@ export default new Router({
           component: MainPage,
           children: [
             {
+              path: '/HomePage/Display',
+              component: DisplayPage
+            },
+            {
               path: '/HomePage/Submit',
               component: SubmitPage
+            },
+            {
+              path: '/HomePage/Login',
+              component: LoginPage
             }
           ]
         }

@@ -15,17 +15,21 @@
 </template>
 
 <script>
-import SubmitPage from './SubmitPage'
+import { mapState } from 'vuex'
+
 export default {
   name: 'MainPage',
   data () {
     return {
-      title: 'Submit Your Credit',
-      description: 'please submit the credit that contain "credit" "creditInfor" "crditDataContractAddress"'
     }
   },
   components: {
-    SubmitPage
+  },
+  computed: {
+    ...mapState([
+      'title', 'description'
+    ]
+    )
   }
 }
 </script>
@@ -70,7 +74,7 @@ export default {
     display: flex;
     justify-content: center;
     width: 50%;
-    height: 3rem;
+    height: 2rem;
     color: white;
     font-size: 1rem;
     margin: 0.25rem auto;

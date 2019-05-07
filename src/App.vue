@@ -6,7 +6,12 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  created () {
+    // 在进入界面的时候 主动跳转到Display界面
+    this.$store.commit('JUMP', 'Display')
+    this.$router.push({path: `/HomePage/Display`})
+  }
 }
 </script>
 
@@ -28,5 +33,6 @@ export default {
     min-height: 720px;
     overflow:hidden;
     background-color: #342272;
+    font-family: Arial;
   }
 </style>

@@ -15,9 +15,9 @@ export default {
   name: 'SubmitPage',
   data () {
     return {
-      first_des: 'CreditId',
-      second_des: 'CreditInfor',
-      third_des: 'CreditDataContractAddress'
+      first_des: 'Credit ID',
+      second_des: 'Credit DATA',
+      third_des: 'Credit TYPE'
     }
   }
 }
@@ -48,12 +48,10 @@ export default {
     margin-bottom: 1rem;
     border-radius: 0.5rem;
     border: 2px solid white;
+    transition: all 0.5s;
   }
   input{
     outline:none;
-  }
-  input::-webkit-input-placeholder {
-    color: #e7e7e7;
   }
   #submit_button{
     cursor: pointer;
@@ -64,6 +62,10 @@ export default {
     color: white;
     text-align:center;
     margin: 2rem 0;
-    background-color: #d68e11;
+    background-color: #89a4d6;
+  }
+  input:focus {
+    outline: 0;
+    border-color: #89a4d6;
   }
 </style>
