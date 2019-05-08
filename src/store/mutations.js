@@ -1,6 +1,8 @@
 import {
   CHANGE_PAGE,
-  JUMP
+  JUMP,
+  CHANGE_TO_LOGIN,
+  CHANGE_TO_REGIST
 } from './mutation-types.js'
 
 export default {
@@ -25,5 +27,13 @@ export default {
         }
       }
     }
+  },
+  [CHANGE_TO_LOGIN] (state) {
+    state.title = 'LOGIN'
+    state.is_log = true
+  },
+  [CHANGE_TO_REGIST] (state) {
+    state.title = 'REGISTER'
+    state.is_log = false
   }
 }

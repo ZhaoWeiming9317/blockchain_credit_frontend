@@ -10,10 +10,11 @@ Vue.use(Vuex)
 
 const state = {
   now_page: 0,
+  is_log: true,
   nav_list: [
-    {name: 'Search', isActive: false, right: '200px'},
-    {name: 'Submit', isActive: true, right: '100px'},
-    {name: 'Login', isActive: false, right: '0'}],
+    {name: 'Search', isActive: false, right: '220px'},
+    {name: 'Submit', isActive: true, right: '120px'},
+    {name: 'Login', isActive: false, right: '20px'}],
   title: 'All Credits Display',
   titles: [
     'All Credits Display',

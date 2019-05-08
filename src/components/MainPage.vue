@@ -23,8 +23,6 @@ export default {
     return {
     }
   },
-  components: {
-  },
   computed: {
     ...mapState([
       'title', 'description'

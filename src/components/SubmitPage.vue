@@ -1,11 +1,11 @@
 <template>
     <div class="submit_form_wrapper">
       <div class="input_des">{{first_des}}</div>
-      <input class="input_style" id="submit_first_input" name="input" type="text">
+      <input class="input_style" id="creditId_input" name="input" type="text">
       <div class="input_des">{{second_des}}</div>
-      <input class="input_style" id="submit_second_input" name="input" type="text">
+      <input class="input_style" id="creditData_input" name="input" type="text">
       <div class="input_des">{{third_des}}</div>
-      <input class="input_style" id="submit_third_input" name="input" type="text">
+      <input class="input_style" id="creditTYPE_input" name="input" type="text">
       <div id="submit_button">submit</div>
     </div>
 </template>
@@ -19,6 +19,16 @@ export default {
       second_des: 'Credit DATA',
       third_des: 'Credit TYPE'
     }
+  },
+  beforeRouteEnter (to, from, next) {
+    setTimeout(() => {
+      for (let is of document.getElementsByClassName('input_style')) {
+        is.style.width = '60%'
+        is.style.paddingLeft = '2rem'
+        is.style.paddingRight = '2rem'
+      }
+    }, 300)
+    next()
   }
 }
 </script>
@@ -27,7 +37,6 @@ export default {
   .submit_form_wrapper{
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction:column;
     width: 40%;
     margin: 2rem auto;
@@ -35,19 +44,20 @@ export default {
   .input_des{
     font-size: 1rem;
     color: #ffffff;
+    margin: 0 auto;
   }
   .input_style{
     display: block;
-    width: 60%;
+    width: 0;
     height: 2rem;
+    left: 0;
     font-size: 1.2rem;
     color: white;
     background-color: transparent;
-    padding: 0 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
+    margin-left: calc(20% - 2rem);
     border-radius: 0.5rem;
-    border: 2px solid white;
+    border: 1.3px solid white;
     transition: all 0.5s;
   }
   input{
@@ -61,7 +71,7 @@ export default {
     line-height: 3rem;
     color: white;
     text-align:center;
-    margin: 2rem 0;
+    margin: 2rem auto;
     background-color: #89a4d6;
   }
   input:focus {

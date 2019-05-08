@@ -61,8 +61,10 @@ export default {
   #top_nav_boxer{
     position: relative;
     margin: 0 30px;
+    padding-right: 20px;
     width: 1100px;
     height: 100%;
+    overflow: hidden;
   }
   #logo {
     position: absolute;
@@ -91,6 +93,7 @@ export default {
     cursor: pointer;
     width:80px;
     font_size:18px;
+    font-weight: bold;
     color: white;
     text-align: center;
     vertical-align: middle;
@@ -100,15 +103,18 @@ export default {
   #hover_block{
     position: absolute;
     width: 100px;
-    height: 70px;
-    right: 200px;
+    height: 66px;
+    right: 220px;
     overflow: hidden;
     background-color: #89a4d6;
     z-index: -1;
-    transition: right 0.7s;
+    transform: rotate(9deg);
+    transition: right 0.7s cubic-bezier(0.2, 0.0, 0.2, 1);
   }
   .top_nav_item_active{
     background-color: #89a4d6;
+    height: 66px;
+    transform: rotate(9deg);
     color: #ffffff;
   }
 </style>
