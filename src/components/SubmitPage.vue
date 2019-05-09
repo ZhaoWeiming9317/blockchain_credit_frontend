@@ -27,7 +27,7 @@ export default {
         is.style.paddingLeft = '2rem'
         is.style.paddingRight = '2rem'
       }
-    }, 300)
+    }, 200)
     next()
   }
 }
@@ -42,16 +42,17 @@ export default {
     margin: 2rem auto;
   }
   .input_des{
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
     color: #ffffff;
     margin: 0 auto;
   }
   .input_style{
     display: block;
     width: 0;
-    height: 2rem;
+    height: 2.5rem;
     left: 0;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: white;
     background-color: transparent;
     margin: 1rem 0;
@@ -67,12 +68,13 @@ export default {
     cursor: pointer;
     width: 7rem;
     height: 3rem;
+    font-size: 1.2rem;
     border-radius: 1rem;
     line-height: 3rem;
     color: white;
     text-align:center;
     margin: 2rem auto;
-    background-color: #89a4d6;
+    background: linear-gradient(top right, rgb(76, 44, 173),  rgb(49, 100, 173));
   }
   input:focus {
     outline: 0;

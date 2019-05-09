@@ -29,11 +29,11 @@ export default {
     }
   },
   [CHANGE_TO_LOGIN] (state) {
-    state.title = 'LOGIN'
+    state.title = 'Login'
     state.is_log = true
   },
   [CHANGE_TO_REGIST] (state) {
-    state.title = 'REGISTER'
+    state.title = 'Register'
     state.is_log = false
   }
 }

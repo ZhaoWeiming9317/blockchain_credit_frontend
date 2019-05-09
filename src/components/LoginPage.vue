@@ -36,7 +36,7 @@ export default {
       ornament2.height = '140px'
       ornament2.top = '260px'
       ornament2.left = '-80px'
-    }, 500)
+    }, 200)
     next()
   },
   methods: {
@@ -187,4 +187,9 @@ export default {
     height: 30px;
     width: 300px;
   }
+  input::-webkit-input-placeholder{
+    color:#ffffff;
+    opacity: 0.5;
+  }
+
 </style>

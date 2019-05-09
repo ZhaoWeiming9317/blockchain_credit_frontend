@@ -8,12 +8,13 @@
     </div>
     <el-table
       :data="table_data"
-      style="width: 800px;"
+      style="width: 860px;font-size: 15px;color: #ffffff"
+      cell-style="background-color:#89a4d6"
       >
       <el-table-column
         v-for="item in table_title"
         :key="item" :prop="item.name"
-        :label="item.name" :width="item.name==='creditId'?200:120"
+        :label="item.name" :width="item.name==='creditId'?200:105"
         align="center">
       </el-table-column>
       <el-table-column
@@ -70,7 +71,7 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 80%;
+    width: 860px;
     margin-bottom: 1rem;
     margin-left: auto;
     margin-right: auto;
@@ -81,7 +82,7 @@ export default {
     justify-content: center;
     align-items: center;
     height: 3rem;
-    width: 800px;
+    width: 860px;
     margin: 0.7rem auto;
     margin-bottom: 1.5rem;
   }
@@ -126,8 +127,9 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 800px;
+    width: 860px;
     height: 3rem;
+    color: #888888 !important;
     background-color: white;
   }
   .table_bottom{
@@ -155,7 +157,7 @@ export default {
   .full_bottom{
     color:#ffffff;
     background-color: #89a4d6;
-    border: 1px solid #89a4d6;
+    border: 1px solid #ffffff;
   }
   .full_bottom::after{
     width: 0;
