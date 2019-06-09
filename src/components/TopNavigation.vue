@@ -5,8 +5,8 @@
       <div id="hover_block">
       </div>
       <ul class="top_nav_list">
-        <li v-for="item in nav_list"
-            :key="item"
+        <li v-for="(item, index) in nav_list"
+            :key="index"
             @click="jump(item.name)"
             @mouseover="jumpHover(item.right)"
             @mouseout="jumpOut">
@@ -103,18 +103,18 @@ export default {
   #hover_block{
     position: absolute;
     width: 100px;
-    height: 66px;
+    height: 70px;
     right: 220px;
     overflow: hidden;
     background-color: #89a4d6;
     z-index: -1;
-    transform: rotate(9deg);
+    /*transform: rotate(9deg);*/
     transition: right 0.7s cubic-bezier(0.2, 0.0, 0.2, 1);
   }
   .top_nav_item_active{
     background-color: #89a4d6;
-    height: 66px;
-    transform: rotate(9deg);
+    height: 70px;
+    /*transform: rotate(9deg);*/
     color: #ffffff;
   }
 </style>

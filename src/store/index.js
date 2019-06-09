@@ -34,10 +34,10 @@ const state = {
     {name: 'score'},
     {name: 'type'}
   ],
-  tableData: [{creditFrom: 'Xiaoyin', creditId: '41126197809124373XY', creditInfor: 'a infor', score: '88', type: 'student loan'},
-    {creditFrom: 'WeBank', creditId: '513227199806074215WB', creditInfor: 'a infor', score: '67', type: 'petty loan'},
-    {creditFrom: 'WeBank', creditId: '11368198812012353WB', creditInfor: 'a infor', score: '56', type: 'house loan'},
-    {creditFrom: 'Xiaoyin', creditId: '313137197802271235XY', creditInfor: 'a infor', score: '99', type: 'petty loan'}]
+  initialCreditData: [],
+  displayData: [],
+  totalDisplayData: [],
+  username: 'william'
 }
 
 export default new Vuex.Store({

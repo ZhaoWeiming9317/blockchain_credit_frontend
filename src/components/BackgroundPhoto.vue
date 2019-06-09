@@ -17,7 +17,7 @@ export default {
       document.getElementById('left_back_fir').style.width = '1000px'
       document.getElementById('right_back_fir').style.left = '1300px'
       document.getElementById('right_back_fir').style.width = '200px'
-    }, 800)
+    }, 400)
   },
   computed: {
     ...mapState([

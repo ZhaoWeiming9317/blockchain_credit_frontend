@@ -1,0 +1,54 @@
+{
+  "code": "0",
+  "message": "请求成功！",
+  "creditDisplayData": [
+    {
+      "creditFrom": "Xiaoyin",
+      "creditId": "41126197809124373XY",
+      "creditInfor": "a infor",
+      "score": "88",
+      "type": "student loan"
+    },
+    {
+      "creditFrom": "WeBank",
+      "creditId": "513227199806074215WB",
+      "creditInfor": "a infor",
+      "score": "67",
+      "type": "petty loan"
+    },
+    {
+      "creditFrom": "WeBank",
+      "creditId": "11368198812012353WB",
+      "creditInfor": "a infor",
+      "score": "56",
+      "type": "house loan"
+    },
+    {
+      "creditFrom": "Xiaoyin",
+      "creditId": "313137197802271235XY",
+      "creditInfor": "a infor",
+      "score": "99",
+      "type": "petty loan"
+    },
+    {
+      "creditFrom": "Xiaoyin",
+      "creditId": "313137197802271235XY",
+      "creditInfor": "a infor",
+      "score": "45",
+      "type": "petty loan"
+    },{
+      "creditFrom": "ICBC",
+      "creditId": "313134234642271235BC",
+      "creditInfor": "a infor",
+      "score": "99",
+      "type": "petty loan"
+    },
+    {
+      "creditFrom": "Xiaoyin",
+      "creditId": "313137197802271235XY",
+      "creditInfor": "a infor",
+      "score": "99",
+      "type": "petty loan"
+    }
+  ]
+}
