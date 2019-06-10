@@ -48,6 +48,7 @@ export default {
     background-image: url("https://cdn.multilingualres.hr.tencent.com/tencentcareer/static/images/banner_purple_left.png");
     background-size: 100% 100%;
     transition: left,width 1s;
+    overflow: hidden;
   }
   #right_back_fir{
     position: absolute;
@@ -59,5 +60,6 @@ export default {
     background-image: url("https://cdn.multilingualres.hr.tencent.com/tencentcareer/static/images/banner_purple_right.png");
     background-size: 100% 100%;
     transition: left,width 1s,1s;
+    overflow: hidden;
   }
 </style>

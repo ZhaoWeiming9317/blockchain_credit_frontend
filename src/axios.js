@@ -15,5 +15,8 @@ export default {
   // 测试
   test () {
     return instance.get('./static/mock/test.json')
+  },
+  request () {
+    return instance.post('./static/mock/login.json', {userName: this.$state.store.userName})
   }
 }

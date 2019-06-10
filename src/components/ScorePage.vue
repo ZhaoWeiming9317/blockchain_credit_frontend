@@ -1,46 +1,46 @@
 <template>
   <div class="display_wrapper">
-    <div class="search_bar">
-      <input type="text" v-model="search_input" class="input_search_bar" @keyup.enter="getSearchCredit">
-      <span class="search_btn" @click="getSearchCredit">
-        search now
-      </span>
-    </div>
+    <!--<div class="search_bar">-->
+      <!--<input type="text" v-model="search_input" class="input_search_bar" @keyup.enter="getSearchCredit">-->
+      <!--<span class="search_btn" @click="getSearchCredit">-->
+        <!--search now-->
+      <!--</span>-->
+    <!--</div>-->
     <el-table
       :data="displayData"
-      style="width: 635px;font-size: 15px;color: #ffffff"
+      style="width: 635px;font-size: 15px;color: #ffffff; margin-top: 30px"
       cell-style="background-color:#89a4d6"
-      >
+    >
       <el-table-column
         v-for="(item, index) in table_title"
         :key="index" :prop="item.name"
         :label="item.name" :width="item.name==='creditId'?200:105"
         align="center">
       </el-table-column>
-      <el-table-column
-        label="request"
-        width="120"
-        align="center"
-        >
-        <template slot-scope="scope">
-          <div class="table_bottom full_bottom"
-               @click="handleRequest(scope.$index, scope.row)">
-            request
-          </div>
-        </template>
-      </el-table-column>
       <!--<el-table-column-->
-        <!--label="score"-->
+        <!--label="request"-->
         <!--width="120"-->
         <!--align="center"-->
-        <!--&gt;-->
+      <!--&gt;-->
         <!--<template slot-scope="scope">-->
-          <!--<div class="table_bottom empty_bottom"-->
-               <!--@click="handleScore(scope.$index, scope.row)">-->
-            <!--score-->
+          <!--<div class="table_bottom full_bottom"-->
+               <!--@click="handleRequest(scope.$index, scope.row)">-->
+            <!--request-->
           <!--</div>-->
         <!--</template>-->
       <!--</el-table-column>-->
+      <el-table-column
+      label="score"
+      width="120"
+      align="center"
+      >
+      <template slot-scope="scope">
+      <div class="table_bottom empty_bottom"
+      @click="handleScore(scope.$index, scope.row)">
+      score
+      </div>
+      </template>
+      </el-table-column>
     </el-table>
     <div class="page_replacement_wrapper">
       <el-pagination
@@ -94,10 +94,25 @@ export default {
       this.offset = (val - 1) * this.limit
       this.getCredit()
     },
-    handleRequest (index, row) {
+    handleScore (index, row) {
       console.log(index, row)
-      api.request().then((response) => {
-
+      // api.request().then((response) => {
+      // })
+      this.$prompt('Please enter score number', 'Give score', {
+        confirmButtonText: 'define',
+        cancelButtonText: 'cancel',
+        inputPattern: /^100$|^(\d|[1-9]\d)$/,
+        inputErrorMessage: '请输入0到100的整数'
+      }).then(({ value }) => {
+        this.$message({
+          type: 'success',
+          message: '你的评分是: ' + value
+        })
+      }).catch(() => {
+        // this.$message({
+        //   type: 'info',
+        //   message: ''
+        // })
       })
     },
     getInitialCreditData () {
@@ -132,25 +147,6 @@ export default {
         }
         this.displayData.push(tableItem)
       })
-    },
-    getSearchCredit: function () {
-      this.$store.state.totalDisplayData = []
-      if (this.search_input === '') {
-        this.$store.state.totalDisplayData = JSON.parse(JSON.stringify(this.initialCreditData))
-      } else {
-        let temp = JSON.parse(JSON.stringify(this.initialCreditData))
-        for (let i = 0; i < temp.length; i++) {
-          // let reg = /^this.search_input$/
-          let idreg = new RegExp('^' + this.search_input)
-          let reg = new RegExp(this.search_input.toLowerCase())
-          if (idreg.test(temp[i].creditId) === true ||
-            reg.test(temp[i].creditFrom.toLowerCase()) === true ||
-            reg.test(temp[i].type.toLowerCase()) === true) {
-            this.$store.state.totalDisplayData.push(temp[i])
-          }
-        }
-      }
-      this.getCredit()
     }
   }
 }

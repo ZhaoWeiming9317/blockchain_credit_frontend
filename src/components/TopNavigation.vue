@@ -104,7 +104,7 @@ export default {
     position: absolute;
     width: 100px;
     height: 70px;
-    right: 220px;
+    right: 320px;
     overflow: hidden;
     background-color: #89a4d6;
     z-index: -1;
